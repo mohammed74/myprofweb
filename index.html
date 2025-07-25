@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>MOHAMMED THAMER - PROFILE PAGE</title>
+  
+  <!-- CSS Links -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/templatemo-style.css" />
+  
+  <style>
+    /* Passcode Popup Styles */
+    #passcodePopup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.9);
+      z-index: 9999;
+    }
+    
+    #passcodeContainer {
+      background-color: white;
+      width: 350px;
+      padding: 30px;
+      border-radius: 10px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    }
+    
+    #passcodeInput {
+      width: 100%;
+      padding: 12px;
+      margin: 20px 0;
+      box-sizing: border-box;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    
+    #submitPasscode {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      width: 100%;
+      transition: background-color 0.3s;
+    }
+    
+    #submitPasscode:hover {
+      background-color: #45a049;
+    }
+    
+    .passcode-title {
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+    
+    /* Success Message Styles */
+    #form-success-message {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: black;
+      color: white;
+      padding: 30px 40px;
+      font-size: 24px;
+      font-weight: bold;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.7);
+      z-index: 9999;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Passcode Verification Popup -->
+  <div id="passcodePopup">
+    <div id="passcodeContainer">
+      <h2 class="passcode-title">Enter Passcode</h2>
+      <input type="password" id="passcodeInput" placeholder="Please enter the passcode">
+      <button id="submitPasscode">Submit</button>
+    </div>
+  </div>
+
+  <!-- Main Content (hidden until verification) -->
+  <div id="mainContent" style="display:none;">
+    <!-- Welcome Section -->
+    <section id="tmWelcome" class="parallax-window" data-parallax="scroll" data-image-src="img/mini-profile-bg-01.jpg">
+      <div class="container-fluid tm-brand-container-outer">
+        <div class="row">
+          <div class="col-12">
+            <div class="ml-auto mr-0 tm-bg-black-transparent text-white tm-brand-container-inner">
+              <div class="tm-brand-container text-center">
+                <h1 class="tm-brand-name">MOHAMMED THAMER</h1>
+                <p class="tm-brand-description mb-0">Interested in AI and Software Development</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tm-bg-white-transparent tm-welcome-container">
+        <div class="container-fluid">
+          <div class="row h-100">
+            <!-- Welcome Text -->
+            <div class="col-md-7 tm-welcome-left-col">
+              <div class="tm-welcome-left">
+                <h2 class="tm-welcome-title">Welcome...</h2>
+                <p class="pb-0">
+                <h5 class="tm-welcome-title">I'M a Software Engineer | Lecturer | Researcher</h5>
+                Holder of a Master's in Information Systems (Benha University) and a Bachelor's in Software Engineering (Al-Rafidain College). 
+                Passionate about building intelligent software solutions using modern technologies.
+                Currently advancing my career in Scientific Research, AI applications, and software development, while contributing to innovative tech projects.	
+                </p>
+              </div>
+            </div>
+            <!-- Right Column -->
+            <div class="col-md-5">
+              <div class="tm-welcome-right">
+                <i class="fas fa-4x fa-address-card p-3 tm-welcome-icon"></i>
+                <p class="mb-0">
+                  To apply my expertise in software engineering and AI to develop innovative, real-world solutions, contributing to impactful public and academic projects through research and development.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Welcome section -->
+
+    <!-- Portfolio section -->
+    <section id="tmPortfolio">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <!-- Engineer Experience -->
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-green">
+                Engineer
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-green">
+                  Ministry of Justice
+                  <span class="tm-title-small">(2023 April to Present)</span>
+                </h3>
+                <p class="mb-0">
+                  I work as an engineer in the Ministry of Justice. 
+                  I utilize technology to efficiently complete the tasks assigned to me and deliver 
+                  them with high quality and accuracy.
+                </p>
+              </div>
+            </div>
+
+            <!-- Lecturer Experience -->
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-orange">
+                Lecturer
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-orange">
+                  University Lecturer
+                  <span class="tm-title-small">(2021 April to 2023 April)</span>
+                </h3>
+                <p class="mb-0">
+                  I have taught at the University of Uruk, University of Technology, and the University of Information Technology and Communication, 
+                  where I taught subjects such as databases, computer applications, object-oriented programming, application development, and algorithms.
+                </p>
+              </div>
+            </div>
+
+            <!-- Programming Skills -->
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-blue">
+                Programming 
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-blue">
+                  Programming Language
+                  <span class="tm-title-small"></span>
+                </h3>
+                <p class="mb-0">
+                  I have experience in programming languages (Python, Dart, C++, etc.) and database development such as Microsoft Access, MySQL, and MySQL Server, etc.
+                </p>
+              </div>
+            </div>
+
+            <!-- Research Experience -->
+            <div class="tm-portfolio-item">
+              <div class="tm-portfolio-name text-white tm-bg-dark-gray">
+                Multi Experience
+              </div>
+              <div class="tm-portfolio-description">
+                <h3 class="tm-text-dark-gray">
+                  Research and Computer Technology
+                  <span class="tm-title-small"></span>
+                </h3>
+                <p class="mb-0">
+                  Interested in scientific research in data mining, semantic web, ontology and artificial intelligence applications in software development, and the use of basic computer applications (MS Apps and others).
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End portfolio section -->
+
+    <!-- Contact section -->
+    <div id="tmContact" class="parallax-window" data-parallax="scroll" data-image-src="img/mini-profile-bg-02.jpg">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="tm-contact-items-container">
+              <!-- Programming Icon -->
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-laptop-code tm-contact-item-icon"></i>
+                <h6 class="mb-0">
+                  "Transforming ideas into smart solutions through custom software development and AI applications."
+                </h6>
+              </div>
+              
+              <!-- Research Icon -->
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-lightbulb tm-contact-item-icon"></i>
+                <h6 class="mb-0">
+                  "Bridging academic research with real-world tech innovation, especially in medical data semantics."
+                </h6>
+              </div>
+
+              <!-- Education Icon -->
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-chalkboard-teacher tm-contact-item-icon"></i>
+                <h6 class="mb-0">
+                  "Sharing knowledge through practical CS education, from OOP to cutting-edge algorithms."
+                </h6>
+              </div>
+
+              <!-- Collaboration Icon -->
+              <div class="tm-contact-item">
+                <i class="fas fa-5x fa-hands-helping tm-contact-item-icon"></i>
+                <h6 class="mb-0">
+                  "Let's collaborate! Government projects, academic research, or tech startups — I bring technical excellence."
+                </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row">
+          <div class="col-12">
+            <form id="tmContactForm" class="tm-bg-white-transparent">
+              <div class="form-group">
+                <input
+                  type="text"
+                  name="contact_name"
+                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  name="contact_email"
+                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                  placeholder="E-Mail"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  name="contact_message"
+                  rows="4"
+                  class="form-control rounded-0 border-top-0 border-right-0 border-left-0"
+                  placeholder="Message"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="text-center">
+                <button type="submit" class="btn tm-btn-submit rounded-0 text-white">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="row">
+          <footer class="col-12">
+            <p class="text-center tm-copyright-text">
+              <!-- Copyright information can go here -->
+            </p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Message (single instance) -->
+  <div id="form-success-message">
+    ✅ Thank you! Your message has been sent successfully. I'll contact you soon.
+  </div>
+
+  <!-- JavaScript Libraries -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/parallax.min.js"></script>
+  
+  <script>
+    // Configuration
+    const CORRECT_PASSCODE = "xyzpwjda";
+    
+    // Document Ready Function
+    $(document).ready(function() {
+      // Initialize passcode popup
+      $("#passcodePopup").show();
+      $("#passcodeInput").focus();
+      $("#mainContent").hide();
+      
+      // Check for existing session
+      checkPasscode();
+      
+      // Event Handlers
+      $("#submitPasscode").click(verifyPasscode);
+      $("#passcodeInput").keypress(function(e) {
+        if (e.which == 13) verifyPasscode();
+      });
+      
+      // Form Submission Handler
+      const form = document.getElementById('tmContactForm');
+      const successMsg = document.getElementById('form-success-message');
+      
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const formData = new FormData(form);
+
+        fetch("https://formspree.io/f/xyzpwjda", {
+          method: "POST",
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        }).then(response => {
+          if (response.ok) {
+            form.reset();
+            showSuccessMessage();
+          } else {
+            alert("Error submitting form. Please try again later.");
+          }
+        }).catch(error => {
+          alert("Connection error. Please check your internet connection.");
+        });
+      });
+      
+      // Helper Functions
+      function checkPasscode() {
+        const sessionPasscode = sessionStorage.getItem('pcs');
+        if (sessionPasscode === CORRECT_PASSCODE) allowAccess();
+      }
+      
+      function verifyPasscode() {
+        const enteredPasscode = $("#passcodeInput").val();
+        if (enteredPasscode === CORRECT_PASSCODE) {
+          sessionStorage.setItem('pcs', enteredPasscode);
+          allowAccess();
+        } else {
+          alert("Incorrect passcode! Please try again.");
+          $("#passcodeInput").val('').focus();
+        }
+      }
+		  function allowAccess() {
+			  // إذا لم يتم التحديث سابقًا، نعيد تحميل الصفحة
+			  if (!sessionStorage.getItem('refreshed')) {
+				sessionStorage.setItem('refreshed', 'true');
+				location.reload();
+				return;
+			  }
+
+			  // بعد التحديث مرة واحدة، نعرض المحتوى بدون إعادة تحميل ثانية
+			  $("#passcodePopup").hide();
+			  $("#mainContent").show();
+			  setBrandMarginTop();
+			  detectMsBrowser();
+
+			  $('.parallax-window').parallax(); // هذا للتأكد فقط
+			}
+
+
+      function showSuccessMessage() {
+        successMsg.style.display = "block";
+        setTimeout(() => {
+          successMsg.style.display = "none";
+        }, 4000);
+      }
+      
+      function detectMsBrowser() {
+        const using_ms_browser =
+          navigator.appName == "Microsoft Internet Explorer" ||
+          (navigator.appName == "Netscape" && navigator.appVersion.indexOf("Edge") > -1) ||
+          (navigator.appName == "Netscape" && navigator.appVersion.indexOf("Trident") > -1);
+
+        if (using_ms_browser) {
+          alert("Please use Chrome or Firefox for the best browsing experience!");
+        }
+      }
+      
+      function setBrandMarginTop() {
+        const bottomContainerHeight = $(".tm-welcome-container").height();
+        $(".tm-brand-container-outer").css({
+          "margin-top": -bottomContainerHeight + "px"
+        });
+      }
+
+      // Window Resize Handler
+      $(window).resize(setBrandMarginTop);
+    });
+  </script>
+  <script>
+  $(document).ready(function() {
+    $('.parallax-window').parallax();
+  });
+</script>
+
+</body>
+</html>
